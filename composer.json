@@ -1,5 +1,5 @@
 {
-    "name": "morningtrain/https",
+    "name": "morningtrain/laravel-https",
     "type": "library",
     "description": "Provides some initial https setup",
     "keywords": [
