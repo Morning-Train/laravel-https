@@ -1,0 +1,29 @@
+{
+    "name": "morningtrain/laravel-https",
+    "version": "dev",
+    "description": "Provides some initial https setup",
+    "type": "library",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Morningtrain",
+            "email": "mail@morningtrain.dk",
+            "homepage": "https://morningtrain.dk/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MorningTrain\\Laravel\\Https\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "^5.8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MorningTrain\\Laravel\\Https\\LaravelHttpsServiceProvider"
+            ]
+        }
+    }
+}
