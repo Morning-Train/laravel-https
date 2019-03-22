@@ -38,5 +38,4 @@ class Kernel extends HttpKernel
 
 ## Credits
 
-- [Morning Train][link-author]
-
+- [Morning Train](https://morningtrain.dk/)
