@@ -8,19 +8,6 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelHttpsServiceProvider extends ServiceProvider
 {
-    /**
-     * Register bindings in the container.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/https.php' => config_path('https.php'),
-            ], 'laravel-https-config');
-        }
-    }
 
     /**
      * Perform post-registration booting of services.
@@ -29,6 +16,12 @@ class LaravelHttpsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/https.php' => config_path('https.php'),
+            ], 'config');
+        }
+
         /*
 		 * If the use_ssl setting has been set in the environment,
 		 * and if true, enforce https in all generated urls.
