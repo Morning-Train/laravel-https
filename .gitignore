@@ -2,3 +2,4 @@
 /.idea
 .env
 *.swp
+composer.lock
