@@ -19,7 +19,7 @@ class LaravelHttpsServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/https.php' => config_path('https.php'),
-            ], 'config');
+            ], 'mt-config');
         }
 
         /*
